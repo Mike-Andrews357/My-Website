@@ -19,6 +19,7 @@ gem 'bootstrap-sass-extras', '~> 0.0.7'
 gem 'faker', '~> 1.9', '>= 1.9.1'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'redis'
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 
 
 group :development, :test do
