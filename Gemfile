@@ -16,7 +16,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.5'
 gem 'bootstrap-sass-extras', '~> 0.0.7'
-
+gem 'faker', '~> 1.9', '>= 1.9.1'
+gem 'sidekiq', '~> 5.2', '>= 5.2.5'
+gem 'redis'
 
 
 group :development, :test do
