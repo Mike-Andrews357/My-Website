@@ -38,4 +38,11 @@ comment =Comment.create!(
 puts comment.inspect
 
 end
+
+app_setting = AppSetting.create!(
+  theme_name: 'cerulean',
+  tab_name: 'acme_app'
+)
+puts app_setting.inspect
+
 # rails db:drop db:create db:migrate db:seed

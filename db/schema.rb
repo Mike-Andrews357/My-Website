@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_31_140906) do
+ActiveRecord::Schema.define(version: 2019_02_01_230434) do
+
+  create_table "app_settings", force: :cascade do |t|
+    t.string "tab_name"
+    t.string "theme_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -41,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_01_31_140906) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
+    t.string "image"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyWebsite</title>
+    <title><%= @app_setting.tab_name %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' if @app_setting.theme_name == 'default' %>
+    <%= stylesheet_link_tag    'cerulean/theme_manifest', media: 'all', 'data-turbolinks-track': 'reload' if @app_setting.theme_name == 'cerulean'%>
+    <%= stylesheet_link_tag    'cosmo/theme_manifest', media: 'all', 'data-turbolinks-track': 'reload' if @app_setting.theme_name == 'cosmo'%>
+    <%= stylesheet_link_tag    'solar/theme_manifest', media: 'all', 'data-turbolinks-track': 'reload' if @app_setting.theme_name == 'solar'%>
+    <%= stylesheet_link_tag    'yeti/theme_manifest', media: 'all', 'data-turbolinks-track': 'reload' if @app_setting.theme_name == 'yeti'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= render 'layouts/navigation/navbar' %>
+  <%= render 'layouts/navigation_bootswatch/navbar' %>
   <div class='container'>
     <%= bootstrap_flash %>
     <%= yield %>

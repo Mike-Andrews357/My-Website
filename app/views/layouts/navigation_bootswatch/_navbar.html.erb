@@ -16,6 +16,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li>
+      
+        <% if current_user %>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Admin Menu<span class="caret"></span></a>
+            <div class="dropdown-menu" aria-labelledby="download">
+              <%= link_to "App Settings", app_setting_path(@app_setting), class: 'dropdown-item' %>
+              <div class="dropdown-divider"></div>
+              Link placeholder
+            </div>
+          </li>
+        <% end %>
         
       </ul>
       <ul class="nav navbar-nav ml-auto">
